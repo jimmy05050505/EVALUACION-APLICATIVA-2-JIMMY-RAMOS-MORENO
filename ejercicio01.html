@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio de Sueldo Neto</title>
+</head>
+<body>
+    <h1>Ejercicio de Sueldo Neto</h1>
+    
+    <form id="calculadoraForm">
+        <div>
+            <label for="dni">DNI:</label>
+            <input type="text" id="dni" required pattern="[0-9]{8}" title="Ingrese un DNI válido (8 dígitos)">
+        </div>
+        
+        <div>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required pattern="[A-Za-záéíóúñÁÉÍÓÚÑ\s]+" title="Ingrese solo letras">
+        </div>
+        
+        <div>
+            <label for="cargo">Cargo:</label>
+            <select id="cargo" required>
+                <option value="">Seleccione un cargo</option>
+                <option value="2000">Asistente</option>
+                <option value="3500">Analista</option>
+                <option value="5000">Gerente</option>
+                <option value="7000">Director</option>
+            </select>
+        </div>
+        
+        <div>
+            <label for="sueldoBruto">Sueldo Bruto (S/):</label>
+            <input type="text" id="sueldoBruto" readonly>
+        </div>
+        
+        <div>
+            <label for="descuento">Porcentaje de descuento (%):</label>
+            <input type="number" id="descuento" min="0" max="50" required>
+        </div>
+        
+        <button type="submit">Calcular Sueldo Neto</button>
+    </form>
+    
+    <div id="resultado">
+        <h2>Resultado:</h2>
+        <p id="resultadoTexto"></p>
+    </div>
+    
+    <script src="/js/ejercicio01.js"></script>
+</body>
+</html>
